@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beautiful Image Container</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<style>
+  body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #F2F2F2;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:50vh;
+}
+
+.image {
+  position: relative;
+  width: 330px;
+  height: 230px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #FFFFFF;
+  font-size:20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.text h2,
+.text p {
+  margin: 0;
+  padding: 0;
+}
+
+.image:hover .text {
+  opacity: 1;
+}
+ 
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+  }
+  
+  .name-container {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 48px;
+    font-family: 'Pacifico', cursive;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+</style>
+<body>
+<div class="container">
+  <div class="image">
+    <img src="april.jpg" alt="Beautiful Image">
+    <div class="overlay"></div>
+    <div class="text">
+      <h2>April foll</h2>
+      <p>You are April foll<pre>😂😂</pre>
+    </p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="name-container">
+    <h1>Click Image</h1>
+  </div>
+</div>
+</body>
+</html>
